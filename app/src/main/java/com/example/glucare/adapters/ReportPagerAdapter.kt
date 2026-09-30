@@ -1,0 +1,21 @@
+package com.example.glucare.adapters
+
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.glucare.fragments.GlucoseReportFragment
+import com.example.glucare.fragments.InsulinReportFragment
+import com.example.glucare.fragments.SummaryReportFragment
+
+class ReportPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
+
+    override fun getItemCount(): Int = 3
+
+    override fun createFragment(position: Int): Fragment {
+        return when (position) {
+            0 -> GlucoseReportFragment()
+            1 -> InsulinReportFragment()
+            else -> SummaryReportFragment()
+        }
+    }
+}

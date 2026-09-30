@@ -1,0 +1,74 @@
+{
+  "doctors": [
+    {"id":1,"name":"Dr Khaled Al Atassi","specialty":"Endocrinologist / Diabetologist","address":"Algiers","wilaya":"Algiers","wilayaCode":16},
+    {"id":2,"name":"Dr Kamel Djidel","specialty":"Endocrinologist / Diabetologist","address":"Algiers","wilaya":"Algiers","wilayaCode":16},
+    {"id":3,"name":"Dr Lamia Elkhir","specialty":"Endocrinologist / Diabetologist","address":"Cheraga, Algiers","wilaya":"Algiers","wilayaCode":16},
+    {"id":4,"name":"Dr Abdelaziz Feghoul","specialty":"Endocrinologist / Diabetologist","address":"Algiers","wilaya":"Algiers","wilayaCode":16},
+    {"id":5,"name":"Dr Safia Ali Yahia","specialty":"Endocrinologist / Diabetologist","address":"El Achour, Algiers","wilaya":"Algiers","wilayaCode":16},
+    {"id":6,"name":"Dr K Eldjouheur","specialty":"Endocrinologist / Diabetologist","address":"Ain Naadja, Algiers","wilaya":"Algiers","wilayaCode":16},
+    {"id":7,"name":"Dr D Kedjar","specialty":"Endocrinologist / Diabetologist","address":"Ain Naadja, Algiers","wilaya":"Algiers","wilayaCode":16},
+    {"id":8,"name":"Dr Djeghlaf","specialty":"Endocrinologist / Diabetologist","address":"Ouled Fayet, Algiers","wilaya":"Algiers","wilayaCode":16},
+    {"id":9,"name":"Dr Anissa Saadi","specialty":"Diabetologist","address":"Algiers","wilaya":"Algiers","wilayaCode":16},
+    {"id":10,"name":"Dr Mohamed Laifa","specialty":"Diabetologist","address":"Algiers","wilaya":"Algiers","wilayaCode":16},
+
+    {"id":11,"name":"Dr Radia Almahouacif","specialty":"Diabetologist","address":"Algiers","wilaya":"Algiers","wilayaCode":16},
+    {"id":12,"name":"Dr Ihsan Zinai","specialty":"Diabetologist","address":"Algiers","wilaya":"Algiers","wilayaCode":16},
+    {"id":13,"name":"Dr Hassen Louchene","specialty":"Endocrinologist / Diabetologist","address":"Batna","wilaya":"Batna","wilayaCode":5},
+    {"id":14,"name":"Dr Nadir Youyou","specialty":"Endocrinologist / Diabetologist","address":"Annaba","wilaya":"Annaba","wilayaCode":23},
+    {"id":15,"name":"Dr Samira Abdelaziz","specialty":"Diabetologist","address":"Annaba","wilaya":"Annaba","wilayaCode":23},
+
+    {"id":16,"name":"Dr Amine Mghozzi","specialty":"Diabetologist","address":"Constantine","wilaya":"Constantine","wilayaCode":25},
+    {"id":17,"name":"Dr Tahraoui","specialty":"Endocrinologist / Diabetologist","address":"Tizi Ouzou","wilaya":"Tizi Ouzou","wilayaCode":15},
+    {"id":18,"name":"Dr Youcef Aouissi","specialty":"Endocrinologist / Diabetologist","address":"Tizi Ouzou","wilaya":"Tizi Ouzou","wilayaCode":15},
+    {"id":19,"name":"Dr Lotfi Zegrour","specialty":"Diabetologist","address":"Skikda","wilaya":"Skikda","wilayaCode":21},
+    {"id":20,"name":"Dr Mohamed Benslama","specialty":"Endocrinologist","address":"Blida","wilaya":"Blida","wilayaCode":9},
+
+    {"id":21,"name":"Dr Karima Benkhaled","specialty":"Diabetologist","address":"Blida","wilaya":"Blida","wilayaCode":9},
+    {"id":22,"name":"Dr Rachid Kaci","specialty":"Endocrinologist","address":"Bejaia","wilaya":"Bejaia","wilayaCode":6},
+    {"id":23,"name":"Dr Amel Touati","specialty":"Diabetologist","address":"Bejaia","wilaya":"Bejaia","wilayaCode":6},
+    {"id":24,"name":"Dr Mourad Khellaf","specialty":"Endocrinologist","address":"Oran","wilaya":"Oran","wilayaCode":31},
+    {"id":25,"name":"Dr Samira Boudia","specialty":"Diabetologist","address":"Oran","wilaya":"Oran","wilayaCode":31},
+
+    {"id":26,"name":"Dr Karim Belkacem","specialty":"Endocrinologist","address":"Oran","wilaya":"Oran","wilayaCode":31},
+    {"id":27,"name":"Dr Hakim Bouzid","specialty":"Endocrinologist","address":"Setif","wilaya":"Setif","wilayaCode":19},
+    {"id":28,"name":"Dr Imene Boudra","specialty":"Diabetologist","address":"Setif","wilaya":"Setif","wilayaCode":19},
+    {"id":29,"name":"Dr Karim Othmani","specialty":"Endocrinologist","address":"Guelma","wilaya":"Guelma","wilayaCode":24},
+    {"id":30,"name":"Dr Nassima Benyahia","specialty":"Diabetologist","address":"Constantine","wilaya":"Constantine","wilayaCode":25},
+
+    {"id":31,"name":"Dr Farida Hammadi","specialty":"Diabetologist","address":"Batna","wilaya":"Batna","wilayaCode":5},
+    {"id":32,"name":"Dr Nadir Saada","specialty":"Endocrinologist","address":"Tiaret","wilaya":"Tiaret","wilayaCode":14},
+    {"id":33,"name":"Dr Reda Ouali","specialty":"Endocrinologist","address":"Mascara","wilaya":"Mascara","wilayaCode":29},
+    {"id":34,"name":"Dr Salim Bensalem","specialty":"Endocrinologist","address":"Chlef","wilaya":"Chlef","wilayaCode":2},
+    {"id":35,"name":"Dr Leila Hadj","specialty":"Diabetologist","address":"Medea","wilaya":"Medea","wilayaCode":26},
+
+    {"id":36,"name":"Dr Fatima Bouchareb","specialty":"Diabetologist","address":"Sidi Bel Abbes","wilaya":"Sidi Bel Abbes","wilayaCode":22},
+    {"id":37,"name":"Dr Walid Bekkouche","specialty":"Endocrinologist","address":"El Oued","wilaya":"El Oued","wilayaCode":39},
+    {"id":38,"name":"Dr Amina Ziani","specialty":"Diabetologist","address":"Biskra","wilaya":"Biskra","wilayaCode":7},
+    {"id":39,"name":"Dr Sofiane Kaci","specialty":"Endocrinologist","address":"Jijel","wilaya":"Jijel","wilayaCode":18},
+    {"id":40,"name":"Dr Adel Gherbi","specialty":"Endocrinologist","address":"El Tarf","wilaya":"El Tarf","wilayaCode":36},
+
+    {"id":41,"name":"Dr Karima Saadi","specialty":"Diabetologist","address":"Mila","wilaya":"Mila","wilayaCode":43},
+    {"id":42,"name":"Dr Hamza Boudjemaa","specialty":"Endocrinologist","address":"Khenchela","wilaya":"Khenchela","wilayaCode":40},
+    {"id":43,"name":"Dr Manel Bensouilah","specialty":"Diabetologist","address":"Souk Ahras","wilaya":"Souk Ahras","wilayaCode":41},
+    {"id":44,"name":"Dr Zakaria Boudiaf","specialty":"Endocrinologist","address":"Naama","wilaya":"Naama","wilayaCode":45},
+    {"id":45,"name":"Dr Loubna Mecheri","specialty":"Diabetologist","address":"Ain Defla","wilaya":"Ain Defla","wilayaCode":44},
+
+    {"id":46,"name":"Dr Mehdi Rahal","specialty":"Endocrinologist","address":"Bordj Bou Arreridj","wilaya":"Bordj Bou Arreridj","wilayaCode":34},
+    {"id":47,"name":"Dr Yasmine Khelifi","specialty":"Endocrinologist","address":"Setif","wilaya":"Setif","wilayaCode":19},
+    {"id":48,"name":"Dr Hakim Amrani","specialty":"Endocrinologist","address":"Constantine","wilaya":"Constantine","wilayaCode":25},
+    {"id":49,"name":"Dr Leila Aouissi","specialty":"Diabetologist","address":"Ouargla","wilaya":"Ouargla","wilayaCode":30},
+    {"id":50,"name":"Dr Karim Ouadah","specialty":"Endocrinologist","address":"Ouargla","wilaya":"Ouargla","wilayaCode":30},
+
+    {"id":51,"name":"Dr Hamid Bensalah","specialty":"Endocrinologist","address":"Mostaganem","wilaya":"Mostaganem","wilayaCode":27},
+    {"id":52,"name":"Dr Samia Guettal","specialty":"Diabetologist","address":"Mostaganem","wilaya":"Mostaganem","wilayaCode":27},
+    {"id":53,"name":"Dr Rania Saouli","specialty":"Diabetologist","address":"Bouira","wilaya":"Bouira","wilayaCode":10},
+    {"id":54,"name":"Dr Kamel Heddad","specialty":"Endocrinologist","address":"Tipaza","wilaya":"Tipaza","wilayaCode":42},
+    {"id":55,"name":"Dr Djamila Benhamou","specialty":"Diabetologist","address":"Relizane","wilaya":"Relizane","wilayaCode":48},
+
+    {"id":56,"name":"Dr Youssef Driouech","specialty":"Endocrinologist","address":"Ghardaia","wilaya":"Ghardaia","wilayaCode":47},
+    {"id":57,"name":"Dr Karim Djeffal","specialty":"Diabetologist","address":"Laghouat","wilaya":"Laghouat","wilayaCode":3},
+    {"id":58,"name":"Dr Amel Mebarki","specialty":"Diabetologist","address":"Tebessa","wilaya":"Tebessa","wilayaCode":12},
+    {"id":59,"name":"Dr Amina Rahmani","specialty":"Endocrinologist","address":"Adrar","wilaya":"Adrar","wilayaCode":1},
+    {"id":60,"name":"Dr Salima Bensalem","specialty":"Diabetologist","address":"Tindouf","wilaya":"Tindouf","wilayaCode":37}
+  ]
+}

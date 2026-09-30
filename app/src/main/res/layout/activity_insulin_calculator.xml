@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_calculator_gradient"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:background="@drawable/circle_light_blue"
+            android:alpha="0.15"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="-60dp"
+            android:layout_marginEnd="-60dp" />
+
+        <View
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:background="@drawable/circle_glow_purple"
+            android:alpha="0.12"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="-40dp"
+            android:layout_marginStart="-40dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/circle_white"
+                    android:gravity="center"
+                    android:elevation="8dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_insulin_premium"
+                        android:scaleType="centerInside" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/insulin_calculator_title"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_secondary"
+                        android:letterSpacing="0.1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/smart_dose"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/btnHistory"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_history"
+                    android:padding="8dp"
+                    android:background="@drawable/circle_light_blue"
+                    app:tint="@color/primary_blue"
+                    android:layout_marginEnd="8dp" />
+
+                <ImageView
+                    android:id="@+id/btnInsights"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/insight"
+                    android:padding="8dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutConfidence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivConfidenceIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/accurante"
+                    app:tint="@color/primary_blue" />
+
+                <TextView
+                    android:id="@+id/tvConfidenceText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="AI Confidence: High"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginStart="12dp" />
+
+                <TextView
+                    android:id="@+id/tvBasedOnReadings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Based on 12 readings"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary" />
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/current_glucose"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginBottom="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <EditText
+                            android:id="@+id/etCurrentGlucose"
+                            android:layout_width="0dp"
+                            android:layout_height="70dp"
+                            android:layout_weight="1"
+                            android:text="126"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+
+                            android:background="@null"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/glucose_mg_dl"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_secondary"
+                            android:layout_marginStart="8dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnRefresh"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            app:icon="@drawable/ic_refresh"
+                            app:iconGravity="textStart"
+                            app:iconPadding="0dp"
+                            android:backgroundTint="@color/light_blue"
+                            app:cornerRadius="24dp"
+                            android:layout_marginStart="16dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvGlucoseStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="● Normal Range"
+                        android:textSize="12sp"
+                        android:textColor="@color/success_green"
+                        android:background="@drawable/bg_status_green"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="4dp"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_carbs"
+                           />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/carbohydrates"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginStart="8dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/g"
+                            android:textSize="14sp"
+                            android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <Button
+                            android:id="@+id/btnMinus"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:text="-"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:backgroundTint="@color/primary_blue"
+                            app:cornerRadius="24dp" />
+
+                        <EditText
+                            android:id="@+id/etCarbs"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_weight="1"
+                            android:text="45"
+                            android:textSize="28sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/warning_orange"
+                            android:gravity="center"
+                            android:background="@null"
+                            android:inputType="number"
+                            android:maxLength="3" />
+
+                        <Button
+                            android:id="@+id/btnPlus"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:text="+"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:backgroundTint="@color/primary_blue"
+                            app:cornerRadius="24dp" />
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/btnCarb15"
+                                android:layout_width="60dp"
+                                android:layout_height="40dp"
+                                android:text="15g"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_carb_pill"
+                                android:gravity="center"
+                                android:layout_marginEnd="8dp" />
+
+                            <TextView
+                                android:id="@+id/btnCarb30"
+                                android:layout_width="60dp"
+                                android:layout_height="40dp"
+                                android:text="30g"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_carb_pill"
+                                android:gravity="center"
+                                android:layout_marginEnd="8dp" />
+
+                            <TextView
+                                android:id="@+id/btnCarb45"
+                                android:layout_width="60dp"
+                                android:layout_height="40dp"
+                                android:text="45g"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_carb_pill"
+                                android:gravity="center"
+                                android:layout_marginEnd="8dp" />
+
+                            <TextView
+                                android:id="@+id/btnCarb60"
+                                android:layout_width="60dp"
+                                android:layout_height="40dp"
+                                android:text="60g"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_carb_pill"
+                                android:gravity="center"
+                                android:layout_marginEnd="8dp" />
+
+                            <TextView
+                                android:id="@+id/btnCarb75"
+                                android:layout_width="60dp"
+                                android:layout_height="40dp"
+                                android:text="75g"
+                                android:textColor="@color/white"
+                                android:background="@drawable/bg_carb_pill"
+                                android:gravity="center" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/meal_type"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary"
+                            android:layout_marginBottom="8dp" />
+
+                        <RadioGroup
+                            android:id="@+id/rgMealType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/rbBreakfast"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/breakfast"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/rbLunch"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/lunch"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/rbDinner"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/dinner"
+                                android:textSize="12sp" />
+
+                            <RadioButton
+                                android:id="@+id/rbSnack"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/snack"
+                                android:textSize="12sp" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_insulin_small"
+                            app:tint="@color/primary_blue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/insulin_ratio"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginStart="8dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/tvRatioValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1u / 10g"
+                            android:textSize="14sp"
+                            android:textColor="@color/primary_blue"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <SeekBar
+                        android:id="@+id/seekBarRatio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="20"
+                        android:progress="10"
+                        android:progressTint="@color/primary_blue" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1u / 5g"
+                            android:textSize="10sp"
+                            android:textColor="@color/text_secondary" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1u / 20g"
+                            android:textSize="10sp"
+                            android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSmartRecommendation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="12dp"
+                app:cardBackgroundColor="@color/primary_blue"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:background="@drawable/badge_ai"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="4dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="⚕️"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ucsf_guidelines"
+                                android:textSize="10sp"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:layout_marginStart="4dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/tvConfidenceLevel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/high_confidence"
+                            android:textSize="10sp"
+                            android:textColor="@color/white"
+                            android:alpha="0.9" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:id="@+id/tvSmartDose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.5"
+                            android:textSize="64sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/units"
+                            android:textSize="18sp"
+                            android:textColor="@color/white"
+                            android:alpha="0.9"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginBottom="12dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="#33FFFFFF"
+                        android:padding="12dp"
+                        android:layout_marginBottom="16dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/carbs"
+                                android:textSize="10sp"
+                                android:textColor="@color/white"
+                                android:alpha="0.7" />
+
+                            <TextView
+                                android:id="@+id/tvCarbDose"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3.0"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/correction"
+                                android:textSize="10sp"
+                                android:textColor="@color/white"
+                                android:alpha="0.7" />
+
+                            <TextView
+                                android:id="@+id/tvCorrectionDose"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1.5"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/target"
+                                android:textSize="10sp"
+                                android:textColor="@color/white"
+                                android:alpha="0.7" />
+
+                            <TextView
+                                android:id="@+id/tvTargetGlucose"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="120"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="⚖️"
+                                android:textSize="14sp"
+                                android:layout_marginEnd="4dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/insulin_ratio"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:alpha="0.7" />
+
+                            <TextView
+                                android:id="@+id/tvDisplayRatio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1:10"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:layout_marginStart="4dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="📉"
+                                android:textSize="14sp"
+                                android:layout_marginEnd="4dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/correction_factor"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:alpha="0.7" />
+
+                            <TextView
+                                android:id="@+id/tvDisplayCorrection"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1:50"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:layout_marginStart="4dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvSmartMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Based on UCSF guidelines and your history"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:alpha="0.9"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/alternative_doses"
+                        android:textSize="11sp"
+                        android:textColor="@color/white"
+                        android:alpha="0.7"
+                        android:layout_marginBottom="4dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:id="@+id/tvAlternativeLow"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:text="3.5"
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:background="@drawable/alt_dose"
+                            android:layout_marginEnd="4dp" />
+
+                        <TextView
+                            android:id="@+id/tvAlternativeMedium"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:text="4.5"
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:background="@drawable/chosen_dose"
+                            android:layout_marginHorizontal="4dp" />
+
+                        <TextView
+                            android:id="@+id/tvAlternativeHigh"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:text="5.5"
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:background="@drawable/alt_dose"
+                            android:layout_marginStart="4dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnUseSmartDose"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:text="@string/use_this_dose"
+                            android:textAllCaps="false"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:backgroundTint="@color/white"
+                            android:textColor="@color/primary_blue"
+                            app:cornerRadius="24dp"
+                            android:layout_marginEnd="8dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnMoreOptions"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:padding="0dp"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:insetLeft="0dp"
+                            android:insetRight="0dp"
+                            app:icon="@drawable/more"
+                            app:iconGravity="textStart"
+                            app:iconSize="24dp"
+                            app:iconPadding="0dp"
+                            app:iconTint="@color/primary_blue"
+                            android:backgroundTint="@color/white"
+                            app:cornerRadius="24dp"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardEducationalTip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_info"
+                        android:padding="8dp"
+                        android:background="@drawable/circle_light_blue"
+                        app:tint="@color/primary_blue" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/did_you_know"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary" />
+
+                        <TextView
+                            android:id="@+id/tvEducationalTip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Basal insulin should be 40-50% of your total daily dose"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/btnNextTip"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_refresh"
+                        android:padding="6dp"
+                        android:background="@drawable/circle_light_gray"
+                        app:tint="@color/primary_blue" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardInsulinSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/your_insulin_settings"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                        <ImageView
+                            android:id="@+id/btnEditSettings"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_edit"
+                            android:padding="6dp"
+                            android:background="@drawable/circle_light_blue"
+                            app:tint="@color/primary_blue" />
+                    </LinearLayout>
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2"
+                        android:rowCount="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/insulin_ratio"
+                                android:textSize="11sp"
+                                android:textColor="@color/text_secondary" />
+
+                            <TextView
+                                android:id="@+id/tvUserRatio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1u / 10g"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/primary_blue" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/correction_factor"
+                                android:textSize="11sp"
+                                android:textColor="@color/text_secondary" />
+
+                            <TextView
+                                android:id="@+id/tvUserCorrection"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1u / 50 mg/dL"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/primary_blue" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/target_glucose"
+                                android:textSize="11sp"
+                                android:textColor="@color/text_secondary" />
+
+                            <TextView
+                                android:id="@+id/tvUserTarget"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="120 mg/dL"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/primary_blue" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/basal_dose"
+                                android:textSize="11sp"
+                                android:textColor="@color/text_secondary" />
+
+                            <TextView
+                                android:id="@+id/tvUserBasal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="20 units"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/primary_blue" />
+                        </LinearLayout>
+                    </GridLayout>
+
+                    <TextView
+                        android:id="@+id/tvLastUpdated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/based_on_ucsf"
+                        android:textSize="10sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCalculate"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/calculate_dose"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/primary_blue"
+                android:textColor="@color/white"
+                app:cornerRadius="28dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/save_to_history"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/text_primary"
+                app:cornerRadius="28dp"
+                app:strokeColor="@color/primary_blue"
+                app:strokeWidth="2dp"
+                android:layout_marginBottom="24dp"
+                app:icon="@drawable/ic_save"
+                app:iconGravity="textStart"
+                app:iconTint="@color/primary_blue" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

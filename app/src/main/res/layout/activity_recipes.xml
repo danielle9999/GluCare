@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_light">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="44dp"
+        android:paddingBottom="16dp"
+        android:background="@drawable/bg_premium_gradient">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_arrow_back"
+            android:padding="10dp"
+            android:background="@drawable/circle_white"
+            app:tint="@color/primary_blue" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/healthy_recipes_title"
+                android:textSize="11sp"
+                android:textColor="@color/white"
+                android:alpha="0.8"
+                android:textStyle="bold"
+                android:letterSpacing="0.15" />
+
+            <TextView
+                android:id="@+id/tvRecipesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/diabetic_friendly_title"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnFavorites"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/fav"
+            android:padding="8dp"
+            android:background="@drawable/circle_white"
+            app:tint="@color/primary_red"
+            android:layout_marginEnd="8dp" />
+
+        <LinearLayout
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/circle_white"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_recipe" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Search bar -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilSearchRecipe"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/search_recipes"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        app:startIconDrawable="@drawable/ic_search"
+        app:endIconMode="clear_text"
+        app:boxCornerRadiusTopStart="28dp"
+        app:boxCornerRadiusTopEnd="28dp"
+        app:boxCornerRadiusBottomStart="28dp"
+        app:boxCornerRadiusBottomEnd="28dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearchRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:textSize="15sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Category chips (horizontal scroll) -->
+    <HorizontalScrollView
+        android:id="@+id/categoryScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="8dp">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true" />
+    </HorizontalScrollView>
+
+    <!-- Result count + sort -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/tvRecipeCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/all_recipes"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSortLowSugar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/low_sugar_filter"
+            android:textSize="11sp"
+            app:chipBackgroundColor="@color/light_green"
+            style="@style/Widget.MaterialComponents.Chip.Filter" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSortQuick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quick_filter"
+            android:textSize="11sp"
+            android:layout_marginStart="8dp"
+            app:chipBackgroundColor="@color/light_orange"
+            style="@style/Widget.MaterialComponents.Chip.Filter" />
+    </LinearLayout>
+
+    <!-- Empty state -->
+    <LinearLayout
+        android:id="@+id/layoutRecipesEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="48dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/ic_recipe"
+            android:alpha="0.3"
+            app:tint="@color/primary_green" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_recipes_found"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="12dp" />
+    </LinearLayout>
+
+    <!-- Dynamic recipe list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRecipes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="8dp"
+        android:paddingBottom="16dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>

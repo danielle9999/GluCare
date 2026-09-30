@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    REDESIGNED activity_chatbot.xml
+    Clean medical chat UI: white background, navy header,
+    teal send button, subtle chip pills — professional & calm.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F4F8">
+
+    <!-- ─────────────────────────────────────────
+         HEADER — navy bar, clean and trustworthy
+         ───────────────────────────────────────── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="44dp"
+        android:paddingBottom="12dp"
+        android:background="@drawable/bg_premium_gradient"
+        android:elevation="4dp">
+
+        <!-- Back button — white circle -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/ic_arrow_back"
+            android:padding="9dp"
+            android:background="@drawable/circle_white"
+            app:tint="#1A5276"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Bot avatar -->
+        <FrameLayout
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_card_insulin"
+            android:layout_marginEnd="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ai"
+                app:tint="@color/white" />
+        </FrameLayout>
+
+        <!-- Title + subtitle stack -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/diabetes_assistant"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/expert_typing"
+                android:textSize="11sp"
+                android:textColor="#89BFCD" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ─────────────────────────────────────────
+         CHAT MESSAGES
+         ───────────────────────────────────────── -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp"
+        android:clipToPadding="false" />
+
+    <!-- ─────────────────────────────────────────
+         TYPING INDICATOR
+         ───────────────────────────────────────── -->
+    <TextView
+        android:id="@+id/typingIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/expert_typing"
+        android:textSize="12sp"
+        android:textColor="#8A9BAB"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+        android:visibility="gone" />
+
+    <!-- ─────────────────────────────────────────
+         QUICK TOPIC CHIPS — refined pill style
+         ───────────────────────────────────────── -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:background="@color/white"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:elevation="2dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Each chip: white bg, teal border, dark text — no filled colour blast -->
+            <TextView
+                android:id="@+id/chipHypo"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="@string/low_sugar"
+                android:background="@drawable/bg_sugar_focus"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="#007C91"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/chipHyper"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="@string/high_sugar"
+                android:background="@drawable/bg_sugar_focus"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="#007C91"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/chipInsulin"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="@string/insulin"
+                android:background="@drawable/bg_sugar_focus"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="#007C91"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/chipDiet"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="@string/diet"
+                android:background="@drawable/bg_sugar_focus"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="#007C91"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/chipExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="@string/exercise"
+                android:background="@drawable/bg_sugar_focus"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="#007C91"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/chipSymptoms"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="@string/symptoms"
+                android:background="@drawable/bg_sugar_focus"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="#007C91" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- ─────────────────────────────────────────
+         INPUT BAR — white surface, clean layout
+         ───────────────────────────────────────── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/white"
+        android:elevation="6dp">
+
+        <!-- Text field with light grey background pill -->
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/ask_about_diabetes"
+            android:textColorHint="#B0BEC5"
+            android:textColor="#1A2B3C"
+            android:textSize="14sp"
+            android:padding="12dp"
+            android:background="@drawable/bg_nutrition_sugar"
+            android:minHeight="46dp"
+            android:maxLines="3"
+            android:imeOptions="actionSend"
+            android:inputType="textMultiLine" />
+
+        <!-- Send button — teal, rounded -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSend"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="8dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            app:icon="@drawable/ic_arrow_forward"
+            app:iconTint="@color/white"
+            app:iconSize="20dp"
+            app:iconGravity="textStart"
+            app:backgroundTint="#3F488A"
+            app:cornerRadius="23dp"
+            android:text=""
+            app:iconPadding="0dp" />
+    </LinearLayout>
+
+</LinearLayout>

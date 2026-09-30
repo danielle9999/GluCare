@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="44dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/bg_premium_gradient">
+
+            <!-- Month / Year + nav arrows -->
+            <ImageView
+                android:id="@+id/btnPrevMonth"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_arrow_back"
+                android:background="@drawable/circle_white"
+                android:padding="8dp"
+                android:layout_marginEnd="12dp"
+                app:tint="@color/primary_blue" />
+
+            <TextView
+                android:id="@+id/tvMonthYear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="March 2026"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center" />
+
+            <ImageView
+                android:id="@+id/btnNextMonth"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_arrow_forward"
+                android:background="@drawable/circle_white"
+                android:padding="8dp"
+                android:layout_marginStart="12dp"
+                app:tint="@color/primary_blue" />
+        </LinearLayout>
+
+        <!-- Day-of-week header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:background="@color/white">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="S" android:gravity="center" android:textSize="12sp"
+                android:textColor="@color/error_red" android:textStyle="bold"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="M" android:gravity="center" android:textSize="12sp"
+                android:textColor="@color/text_secondary" android:textStyle="bold"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="T" android:gravity="center" android:textSize="12sp"
+                android:textColor="@color/text_secondary" android:textStyle="bold"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="W" android:gravity="center" android:textSize="12sp"
+                android:textColor="@color/text_secondary" android:textStyle="bold"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="T" android:gravity="center" android:textSize="12sp"
+                android:textColor="@color/text_secondary" android:textStyle="bold"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="F" android:gravity="center" android:textSize="12sp"
+                android:textColor="@color/primary_blue" android:textStyle="bold"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="S" android:gravity="center" android:textSize="12sp"
+                android:textColor="@color/error_red" android:textStyle="bold"/>
+        </LinearLayout>
+
+
+        <!-- ★ REPLACED MaterialCalendarView with standard GridView (no lib needed) -->
+        <GridView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="7"
+            android:horizontalSpacing="0dp"
+            android:verticalSpacing="0dp"
+            android:paddingHorizontal="8dp"
+            android:paddingBottom="8dp"
+            android:background="@color/white"
+            android:stretchMode="columnWidth" />
+
+        <!-- Selected date label -->
+        <TextView
+            android:id="@+id/tvSelectedDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select a day to see events"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_blue"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Empty state -->
+        <TextView
+            android:id="@+id/tvNoEvents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📭  No events for this day"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:padding="20dp"
+            android:visibility="gone" />
+
+        <!-- Events list -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/eventsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="12dp"
+            android:paddingBottom="88dp"
+            android:clipToPadding="false" />
+
+    </LinearLayout>
+
+    <!-- FAB: Add Event -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:src="@drawable/icons8_plus_math_50"
+        app:backgroundTint="@color/primary_blue"
+        app:tint="@color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

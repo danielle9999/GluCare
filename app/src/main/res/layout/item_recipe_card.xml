@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- LEFT: Recipe thumbnail -->
+        <ImageView
+            android:id="@+id/ivRecipeThumbnail"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_recipe"
+            android:clipToOutline="true"
+            android:layout_marginEnd="12dp" />
+        <!--
+            background gives a rounded look; for true rounded corners on the image
+            set android:background to a shape drawable with cornerRadius, e.g.:
+            android:background="@drawable/bg_image_rounded"
+            (create res/drawable/bg_image_rounded.xml — see note at bottom of file)
+        -->
+
+        <!-- RIGHT: all existing content stacked vertically -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Row 1: Name + category badge + favorite -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvRecipeName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Recipe Name"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/tvRecipeCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Breakfast"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/bg_chip_green"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="3dp"
+                    android:layout_marginStart="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivFavorite"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/empty_fav"
+                    app:tint="@color/error_red"
+                    android:padding="4dp"
+                    android:layout_marginStart="4dp" />
+            </LinearLayout>
+
+            <!-- Row 2: prep time + calories -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_clockk"
+                    app:tint="@color/text_secondary" />
+
+                <TextView
+                    android:id="@+id/tvRecipePrepTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20 min"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginStart="4dp" />
+
+                <View android:layout_width="1dp" android:layout_height="12dp"
+                    android:background="@color/light_gray" android:layout_marginHorizontal="8dp"/>
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_calories"
+                    app:tint="@color/warning_orange" />
+
+                <TextView
+                    android:id="@+id/tvRecipeCalories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="320 kcal"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginStart="4dp" />
+            </LinearLayout>
+
+            <!-- Row 3: Nutrition strip (sugar / carbs / protein) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_sugar_focus"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp">
+
+                <!-- Sugar -->
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                    <TextView
+                        android:id="@+id/tvRecipeSugar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8g"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_blue" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Sugar" android:textSize="10sp" android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+
+                <!-- Carbs -->
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                    <TextView
+                        android:id="@+id/tvRecipeCarbs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30g"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/warning_orange" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Carbs" android:textSize="10sp" android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+
+                <!-- Protein -->
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                    <TextView
+                        android:id="@+id/tvRecipeProtein"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12g"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_green" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Protein" android:textSize="10sp" android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+
+                <!-- Diabetic badge -->
+                <TextView
+                    android:id="@+id/tvDiabeticBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✓ DB"
+                    android:textSize="10sp"
+                    android:textColor="@color/primary_green"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

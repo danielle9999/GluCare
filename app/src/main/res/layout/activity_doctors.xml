@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_light">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="44dp"
+        android:paddingBottom="16dp"
+        android:background="@drawable/bg_premium_gradient">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_arrow_back"
+            android:padding="10dp"
+            android:background="@drawable/circle_white"
+            android:layout_margin="16dp"
+            app:tint="@color/primary_blue" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvHeaderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/doctors"
+                android:textSize="11sp"
+                android:textColor="@color/white"
+                android:alpha="0.8"
+                android:textStyle="bold"
+                android:letterSpacing="0.15" />
+
+            <TextView
+                android:id="@+id/tvHeaderSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/diabetes_specialists_title"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutDoctorIcon"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/circle_white"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/ivDoctorIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_doctor"
+                app:tint="@color/primary_blue" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Wilaya Selector -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
+        android:background="@color/white"
+        android:elevation="2dp">
+
+        <TextView
+            android:id="@+id/tvWilayaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_your_wilaya"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="8dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilWilaya"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/choose_wilaya"
+            app:startIconDrawable="@drawable/ic_location"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            android:layout_marginBottom="4dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/actvWilaya"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Result count row -->
+        <LinearLayout
+            android:id="@+id/layoutResultsCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/tvResultsCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/select_wilaya_to_see_doctors"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary" />
+
+            <ImageView
+                android:id="@+id/ivFilter"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_filter"
+                android:padding="6dp"
+                android:background="@drawable/circle_light_blue"
+                app:tint="@color/primary_blue" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Empty state (shown before wilaya chosen or no results) -->
+    <LinearLayout
+        android:id="@+id/layoutEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="48dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_doctor"
+            android:alpha="0.3"
+            app:tint="@color/primary_blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_wilaya_to_see_doctors"
+            android:textSize="15sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+    <!-- Dynamic doctor list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/layoutDoctorsList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp"
+        android:clipToPadding="false"
+        android:visibility="gone" />
+
+</LinearLayout>

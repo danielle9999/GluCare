@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_auth_premium">
+
+    <!-- Premium Animated Background Elements -->
+    <View
+        android:id="@+id/bgCircle1"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@drawable/circle_glow_purple"
+        android:alpha="0.3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="-100dp"
+        android:layout_marginEnd="-80dp" />
+
+    <View
+        android:id="@+id/bgCircle2"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/circle_glow_green"
+        android:alpha="0.25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="-80dp"
+        android:layout_marginStart="-60dp" />
+
+    <!-- Main Content Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="40dp"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="24dp"
+        app:cardBackgroundColor="@color/white"
+        android:backgroundTint="@color/white"
+        android:alpha="0.95">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Premium Header with Glow -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/bg_logo_premium"
+                    android:gravity="center"
+                    android:elevation="12dp">
+
+                    <TextView
+                        android:id="@+id/tvLogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="G"
+                        android:textSize="56sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif-black"
+                        android:shadowColor="#80FFFFFF"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="10" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvAppName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginTop="16dp"
+                    android:letterSpacing="0.1"
+                    android:fontFamily="sans-serif-black"
+                    android:background="@drawable/bg_text_gradient"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp" />
+
+                <TextView
+                    android:id="@+id/tvTagline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/diabetes_management_app"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary"
+                    android:alpha="0.8"
+                    android:layout_marginTop="4dp"
+                    android:letterSpacing="0.05" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="3dp"
+                    android:background="@drawable/bg_divider_gradient"
+                    android:layout_marginTop="16dp" />
+            </LinearLayout>
+
+            <!-- Simple Tab Indicator -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="24dp"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_tab_premium"
+                android:elevation="4dp"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/tvLoginTab"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/login"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_tab_indicator"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:id="@+id/tvSignupTab"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/signup"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_secondary"
+                    android:padding="8dp" />
+
+            </LinearLayout>
+
+            <!-- ViewPager for Forms -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerAuth"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Decorative Small Elements -->
+    <ImageView
+        android:id="@+id/decorativeIcon1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_glucose"
+        android:alpha="0.2"
+        app:tint="@color/primary_blue"
+        app:layout_constraintTop_toTopOf="@id/cardLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="40dp" />
+
+    <ImageView
+        android:id="@+id/decorativeIcon2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_insulin_premium"
+        android:alpha="0.2"
+        app:tint="@color/primary_green"
+        app:layout_constraintBottom_toBottomOf="@id/cardLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="40dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">جلوكير</string>
+
+    <!-- ========== AUTH & ONBOARDING ========== -->
+    <string name="welcome">مرحباً</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="signup">إنشاء حساب</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="password">كلمة المرور</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="forgot_password">نسيت كلمة المرور؟</string>
+    <string name="no_account">ليس لديك حساب؟</string>
+    <string name="have_account">لديك حساب بالفعل؟</string>
+    <string name="full_name">الاسم الكامل</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="create_account">إنشاء حساب</string>
+    <string name="glucose_mg_dl">مجم/دل</string>
+    <string name="complete_profile">إكمال الملف الشخصي</string>
+
+    <!-- Onboarding -->
+    <string name="track_your_glucose">تتبع مستوى السكر</string>
+    <string name="track_glucose_desc">راقب مستوى السكر في الدم بسهولة وشاهد الاتجاهات مع مرور الوقت</string>
+    <string name="smart_insulin_calculator">حاسبة الأنسولين الذكية</string>
+    <string name="smart_insulin_desc">احسب جرعات الأنسولين بناءً على الكربوهيدرات ومستوى السكر الحالي</string>
+    <string name="ai_food_scanner">ماسح الطعام بالذكاء الاصطناعي</string>
+    <string name="ai_food_scanner_desc">امسح المنتجات الغذائية للتحقق من محتوى السكر والمعلومات الغذائية</string>
+    <string name="stay_organized">تنظيم حياتك</string>
+    <string name="stay_organized_desc">تتبع المواعيد والأدوية والوجبات باستخدام التقويم</string>
+    <string name="next">التالي</string>
+    <string name="get_started">ابدأ</string>
+    <string name="skip">تخطي</string>
+
+    <!-- ========== HOME SCREEN ========== -->
+    <string name="home">الرئيسية</string>
+    <string name="good_morning">صباح الخير،</string>
+    <string name="good_afternoon">مساء الخير،</string>
+    <string name="good_evening">مساء الخير،</string>
+    <string name="today_glucose">مستوى السكر اليوم</string>
+    <string name="log">تسجيل</string>
+    <string name="no_reading_yet">لا توجد قراءة بعد</string>
+    <string name="events_today">حدث اليوم</string>
+    <string name="quick_actions">إجراءات سريعة</string>
+    <string name="insulin">الأنسولين</string>
+    <string name="calculator">حاسبة</string>
+    <string name="food_scanner">ماسح الطعام</string>
+    <string name="calendar">التقويم</string>
+    <string name="events_and_meds">الأحداث والأدوية</string>
+    <string name="recipes">وصفات</string>
+    <string name="diabetic_friendly">مناسب لمرضى السكري</string>
+    <string name="find_doctor">ابحث عن طبيب</string>
+    <string name="diabetes_specialists">أخصائيو السكري بالقرب منك</string>
+    <string name="reports_analytics">التقارير والتحليلات</string>
+    <string name="view_health_trends">عرض اتجاهات صحتك</string>
+    <string name="upcoming_today">اليوم</string>
+    <string name="weekly_summary">ملخص أسبوعي</string>
+    <string name="avg_glucose">متوسط السكر</string>
+    <string name="insulin_units">الأنسولين (وحدة)</string>
+    <string name="trend">الاتجاه</string>
+    <string name="improving">تحسن</string>
+    <string name="rising">ارتفاع</string>
+    <string name="stable">مستقر</string>
+
+    <!-- ========== PROFILE SCREEN ========== -->
+    <string name="profile">الملف الشخصي</string>
+    <string name="edit_profile">تعديل الملف</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="health_data">البيانات الصحية</string>
+    <string name="glucose_history">سجل السكر</string>
+    <string name="health_status">الحالة الصحية</string>
+    <string name="average_status">متوسط الحالة</string>
+    <string name="average_glucose_level">متوسط مستوى السكر</string>
+    <string name="contact_information">معلومات الاتصال</string>
+    <string name="verified">تم التحقق</string>
+    <string name="primary">رئيسي</string>
+    <string name="your_health_status">حالتك الصحية</string>
+    <string name="glucose_average_status">متوسط حالة السكر</string>
+    <string name="full_reports">التقارير الكاملة</string>
+    <string name="log_out">تسجيل الخروج</string>
+    <string name="are_you_sure_logout">هل أنت متأكد من رغبتك في تسجيل الخروج؟</string>
+    <string name="copied_to_clipboard">تم النسخ إلى الحافظة</string>
+    <string name="no_phone_number">لا يوجد رقم هاتف مضبوط</string>
+
+    <!-- ========== SETTINGS SCREEN ========== -->
+    <string name="settings">الإعدادات</string>
+    <string name="dark_mode">الوضع الليلي</string>
+    <string name="language">اللغة</string>
+    <string name="notifications">الإشعارات</string>
+    <string name="glucose_units">وحدات قياس السكر</string>
+    <string name="about">حول التطبيق</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="terms_of_service">شروط الخدمة</string>
+    <string name="version">الإصدار</string>
+    <string name="notifications_enabled">تم تفعيل الإشعارات</string>
+    <string name="notifications_disabled">تم إيقاف الإشعارات</string>
+    <string name="select_glucose_unit">اختر وحدة قياس السكر</string>
+    <string name="cancel">إلغاء</string>
+    <string name="ok">موافق</string>
+    <string name="english">English</string>
+    <string name="french">Français</string>
+    <string name="arabic">العربية</string>
+    <string name="select_language">اختر اللغة</string>
+    <string name="save">حفظ</string>
+    <string name="diabetes_management_app">تطبيق إدارة مرض السكري</string>
+    <string name="expert_chatbot">محادث خبير</string>
+    <string name="healthy_recipes">وصفات صحية</string>
+    <string name="reminders">تذكيرات</string>
+    <string name="doctor_directory">دليل الأطباء</string>
+    <string name="analytics">تحليلات</string>
+
+    <!-- ========== INSULIN CALCULATOR ========== -->
+    <string name="insulin_calculator_title">حاسبة الأنسولين</string>
+    <string name="smart_dose">جرعة ذكية</string>
+    <string name="current_glucose">مستوى السكر الحالي</string>
+    <string name="carbohydrates">الكربوهيدرات</string>
+    <string name="g">غم</string>
+    <string name="insulin_ratio">نسبة الأنسولين</string>
+    <string name="calculate_dose">احسب الجرعة</string>
+    <string name="save_to_history">حفظ في السجل</string>
+    <string name="units">وحدات</string>
+    <string name="low">منخفض</string>
+    <string name="normal">طبيعي</string>
+    <string name="elevated">مرتفع</string>
+    <string name="high">مرتفع جداً</string>
+    <string name="carbs">كربوهيدرات</string>
+    <string name="correction">تصحيح</string>
+    <string name="target">الهدف</string>
+    <string name="ucsf_guidelines">إرشادات UCSF</string>
+    <string name="high_confidence">ثقة عالية</string>
+    <string name="medium_confidence">ثقة متوسطة</string>
+    <string name="low_confidence">ثقة منخفضة</string>
+    <string name="first_time">أول مرة</string>
+    <string name="alternative_doses">جرعات بديلة:</string>
+    <string name="conservative">محافظة</string>
+    <string name="recommended">موصى به</string>
+    <string name="aggressive">قوية</string>
+    <string name="use_this_dose">استخدم هذه الجرعة</string>
+    <string name="insulin_settings">إعدادات الأنسولين</string>
+    <string name="your_insulin_settings">إعدادات الأنسولين الخاصة بك</string>
+    <string name="correction_factor">عامل التصحيح</string>
+    <string name="target_glucose">مستوى السكر المستهدف</string>
+    <string name="basal_dose">الجرعة الأساسية</string>
+    <string name="based_on_ucsf">بناءً على إرشادات UCSF</string>
+    <string name="did_you_know">هل تعلم؟</string>
+    <string name="educational_tip">نصيحة تثقيفية</string>
+    <string name="new_tip">نصيحة جديدة</string>
+    <string name="insulin_history">سجل الأنسولين</string>
+    <string name="no_history_yet">لا يوجد سجل بعد. قم بحفظ بعض الجرعات لرؤية الأنماط!</string>
+    <string name="your_insulin_insights">رؤى الأنسولين الخاصة بك</string>
+    <string name="log_more_doses">سجل المزيد من الجرعات لرؤية رؤى حول أنماط الأنسولين الخاصة بك!</string>
+    <string name="settings_updated">تم تحديث الإعدادات</string>
+    <string name="dose_set_to">تم ضبط الجرعة إلى</string>
+    <string name="calculate_a_dose_first">احسب جرعة أولاً</string>
+    <string name="dose_saved">تم حفظ الجرعة! تتبع الفعالية بعد ساعتين</string>
+    <string name="track_effectiveness">تتبع الفعالية</string>
+    <string name="record_glucose_in_2_hours">سجل مستوى السكر بعد ساعتين لمعرفة مدى فعالية هذه الجرعة؟</string>
+    <string name="yes">نعم</string>
+    <string name="not_now">ليس الآن</string>
+    <string name="two_hour_glucose_check">فحص السكر بعد ساعتين</string>
+    <string name="submit">إرسال</string>
+    <string name="feedback_recorded">تم تسجيل الملاحظات! سيساعد هذا في تحسين التوصيات المستقبلية.</string>
+    <string name="no_recent_glucose_readings">لا توجد قراءات حديثة للسكر</string>
+
+    <!-- ========== CHATBOT ========== -->
+    <string name="diabetes_assistant">مساعد مرض السكري</string>
+    <string name="ask_about_diabetes">اسأل عن مرض السكري...</string>
+    <string name="low_sugar">سكر منخفض</string>
+    <string name="high_sugar">سكر مرتفع</string>
+    <string name="diet">النظام الغذائي</string>
+    <string name="exercise">التمارين الرياضية</string>
+    <string name="symptoms">الأعراض</string>
+    <string name="expert_typing">الخبير يكتب...</string>
+    <string name="send">إرسال</string>
+
+    <!-- ========== DOCTORS ========== -->
+    <string name="doctors">الأطباء</string>
+    <string name="diabetes_specialists_title">أخصائيو السكري</string>
+    <string name="select_your_wilaya">اختر ولايتك</string>
+    <string name="choose_wilaya">اختر الولاية</string>
+    <string name="select_wilaya_to_see_doctors">اختر ولاية لرؤية الأطباء</string>
+    <string name="no_doctors_found">لا يوجد أطباء</string>
+    <string name="doctors_found">طبيب تم العثور عليه</string>
+    <string name="doctor_in">طبيب في</string>
+    <string name="doctors_in">أطباء في</string>
+    <string name="no_phone_available">لا يوجد رقم هاتف متاح</string>
+
+    <!-- ========== RECIPES ========== -->
+    <string name="healthy_recipes_title">وصفات صحية</string>
+    <string name="diabetic_friendly_title">مناسب لمرضى السكري</string>
+    <string name="search_recipes">ابحث عن وصفات...</string>
+    <string name="all_recipes">جميع الوصفات</string>
+    <string name="low_sugar_filter">🍬 سكر منخفض</string>
+    <string name="quick_filter">⚡ سريع</string>
+    <string name="no_recipes_found">لا توجد وصفات</string>
+    <string name="favorites">المفضلة</string>
+    <string name="favorite_recipes">الوصفات المفضلة</string>
+    <string name="your_saved_diabetic_recipes">وصفاتك المفضلة لمرضى السكري</string>
+    <string name="added_to_favorites">تمت الإضافة إلى المفضلة</string>
+    <string name="removed_from_favorites">تمت الإزالة من المفضلة</string>
+    <string name="no_favorite_recipes_yet">لا توجد وصفات مفضلة بعد.\nاضغط على ❤️ في أي وصفة لإضافتها هنا</string>
+    <string name="favorite_recipe_count">وصفة مفضلة</string>
+    <string name="favorite_recipes_count">وصفات مفضلة</string>
+    <string name="result_for">نتيجة لـ</string>
+    <string name="results_for">نتائج لـ</string>
+    <string name="in_category">في</string>
+    <string name="nutrition_facts">حقائق غذائية</string>
+    <string name="calories">سعرات حرارية</string>
+    <string name="total_carbs">إجمالي الكربوهيدرات</string>
+    <string name="protein">بروتين</string>
+    <string name="fat">دهون</string>
+    <string name="fiber">ألياف</string>
+    <string name="sugar">سكر</string>
+    <string name="prep_time">وقت التحضير</string>
+    <string name="ingredients">المكونات</string>
+    <string name="instructions">طريقة التحضير</string>
+    <string name="how_to_make">طريقة التحضير</string>
+    <string name="add_to_meal_plan">إضافة إلى خطة الوجبات</string>
+    <string name="plan_this_meal">خطط لهذه الوجبة</string>
+    <string name="date">التاريخ</string>
+    <string name="meal_type">نوع الوجبة</string>
+    <string name="breakfast">الإفطار</string>
+    <string name="lunch">الغداء</string>
+    <string name="dinner">العشاء</string>
+    <string name="snack">وجبة خفيفة</string>
+    <string name="added_to_meal_plan">تمت الإضافة إلى خطة الوجبات!</string>
+
+    <!-- ========== CALENDAR ========== -->
+    <string name="calendar_title">التقويم</string>
+    <string name="select_day_to_see_events">اختر يومًا لرؤية الأحداث</string>
+    <string name="no_events_for_day">📭 لا توجد أحداث في هذا اليوم</string>
+    <string name="add_event">إضافة حدث</string>
+    <string name="edit_event">تعديل الحدث</string>
+    <string name="delete_event">حذف الحدث</string>
+    <string name="event_title_hint">عنوان الحدث</string>
+    <string name="event_description_hint">الوصف</string>
+    <string name="event_time_hint">الوقت (مثال: 14:30)</string>
+    <string name="event_location_hint">الموقع (اختياري)</string>
+    <string name="event_type_label">نوع الحدث</string>
+    <string name="medication">دواء</string>
+    <string name="appointment">موعد</string>
+    <string name="meal">وجبة</string>
+    <string name="set_reminder_30min">ضبط تذكير قبل 30 دقيقة</string>
+    <string name="reminder_set">تم ضبط التذكير قبل 30 دقيقة</string>
+    <string name="event_added">تمت إضافة الحدث!</string>
+    <string name="event_updated">تم تحديث الحدث!</string>
+    <string name="deleted">تم الحذف</string>
+    <string name="view_details">عرض التفاصيل</string>
+    <string name="set_reminder">ضبط تذكير</string>
+    <string name="all_day">طوال اليوم</string>
+    <string name="no_location">لا يوجد موقع</string>
+    <string name="no_description">لا يوجد وصف</string>
+    <string name="event_details">تفاصيل الحدث</string>
+    <string name="title_required">العنوان مطلوب</string>
+
+    <!-- ========== REPORTS ========== -->
+    <string name="reports_title">التقارير</string>
+    <string name="reports_analytics_title">التقارير والتحليلات</string>
+    <string name="glucose_report">السكر</string>
+    <string name="insulin_report">الأنسولين</string>
+    <string name="summary_report">ملخص</string>
+    <string name="share_report">مشاركة التقرير</string>
+    <string name="export_csv">تصدير CSV</string>
+    <string name="export_pdf">تصدير PDF</string>
+    <string name="last_7_days">آخر 7 أيام</string>
+    <string name="last_30_days">آخر 30 يومًا</string>
+    <string name="glucose_trend">اتجاه السكر</string>
+    <string name="summary_30_day">ملخص 30 يوم</string>
+    <string name="daily_averages">المتوسطات اليومية</string>
+    <string name="insights_title">رؤى</string>
+    <string name="no_glucose_data">لا توجد بيانات سكر متاحة</string>
+    <string name="no_insulin_data">لا توجد بيانات أنسولين متاحة</string>
+    <string name="average_by_time_of_day">المتوسط حسب وقت اليوم</string>
+    <string name="morning">الصباح</string>
+    <string name="afternoon">بعد الظهر</string>
+    <string name="evening">المساء</string>
+    <string name="night">الليل</string>
+    <string name="daily_insulin_usage">استخدام الأنسولين اليومي</string>
+    <string name="dose_effectiveness">فعالية الجرعة</string>
+    <string name="insulin_statistics">إحصائيات الأنسولين</string>
+    <string name="total_doses">إجمالي الجرعات</string>
+    <string name="total_insulin">إجمالي الأنسولين</string>
+    <string name="avg_dose">متوسط الجرعة</string>
+    <string name="avg_carbs">متوسط الكربوهيدرات</string>
+    <string name="ic_ratio">نسبة I:C</string>
+    <string name="effectiveness_score">الفعالية</string>
+    <string name="generating_pdf">جاري إنشاء PDF...</string>
+    <string name="open_pdf">فتح PDF</string>
+    <string name="error_generating_pdf">خطأ في إنشاء PDF</string>
+    <string name="error_exporting_csv">خطأ في تصدير CSV</string>
+    <string name="last_reading">آخر قراءة</string>
+    <string name="on">في</string>
+    <string name="today_events">أحداث اليوم</string>
+    <string name="most_readings_in">معظم القراءات في</string>
+    <string name="time_in_range">الوقت ضمن النطاق</string>
+    <string name="lower_than_70">أقل من 70</string>
+    <string name="normal_range">طبيعي</string>
+    <string name="elevated_range">مرتفع</string>
+    <string name="high_range">مرتفع جداً (>180)</string>
+
+    <!-- ========== GLUCOSE HISTORY ========== -->
+    <string name="glucose_history_title">سجل السكر</string>
+    <string name="average_label">المتوسط</string>
+    <string name="total_label">الإجمالي</string>
+    <string name="in_range_label">ضمن النطاق</string>
+    <string name="no_readings_yet">لا توجد قراءات سكر بعد.\nسجل أول قراءة من الشاشة الرئيسية.</string>
+    <string name="delete_reading">حذف القراءة</string>
+    <string name="readings">قراءات</string>
+    <string name="in_range_70_180">ضمن النطاق (70–180)</string>
+
+    <!-- ========== HEALTH INFO ========== -->
+    <string name="complete_your_profile">أكمل ملفك الشخصي</string>
+    <string name="welcome_exclamation">مرحباً!</string>
+    <string name="personal_information">المعلومات الشخصية</string>
+    <string name="your_age">عمرك</string>
+    <string name="select_gender">اختر الجنس</string>
+    <string name="male">ذكر</string>
+    <string name="female">أنثى</string>
+    <string name="other">آخر</string>
+    <string name="body_measurements">قياسات الجسم</string>
+    <string name="height">الطول</string>
+    <string name="weight">الوزن</string>
+    <string name="cm">سم</string>
+    <string name="kg">كجم</string>
+    <string name="your_bmi">مؤشر كتلة الجسم</string>
+    <string name="medical_information">المعلومات الطبية</string>
+    <string name="diabetes_type">نوع السكري</string>
+    <string name="average_blood_sugar">متوسط مستوى السكر</string>
+    <string name="normal_range_70_140">النطاق الطبيعي: 70-140 مجم/دل</string>
+    <string name="info_banner">تساعدنا هذه المعلومات في تخصيص خطة إدارة مرض السكري الخاصة بك</string>
+    <string name="underweight">نقص الوزن</string>
+    <string name="overweight">زيادة الوزن</string>
+    <string name="obese">سمنة</string>
+    <string name="not_calculated">غير محسوب</string>
+    <string name="invalid_input">إدخال غير صحيح</string>
+    <string name="age_required">العمر مطلوب</string>
+    <string name="height_required">الطول مطلوب</string>
+    <string name="weight_required">الوزن مطلوب</string>
+    <string name="please_select_gender">الرجاء اختيار الجنس</string>
+    <string name="profile_completed">تم إكمال الملف الشخصي!</string>
+    <string name="failed_to_save">فشل الحفظ</string>
+
+    <!-- ========== FOOD SCANNER ========== -->
+    <string name="food_scanner_title">ماسح الطعام</string>
+    <string name="check_sugar_content">تحقق من محتوى السكر</string>
+    <string name="camera">الكاميرا</string>
+    <string name="barcode">الباركود</string>
+    <string name="point_camera_at_food">وجه الكاميرا نحو الطعام</string>
+    <string name="scan_barcode_or_enter_manually">امسح الباركود أو أدخل يدوياً</string>
+    <string name="enter_barcode_number">أدخل رقم الباركود</string>
+    <string name="look_up_product">البحث عن المنتج</string>
+    <string name="search_food_by_name">ابحث عن الطعام بالاسم...</string>
+    <string name="total_sugar">إجمالي السكر</string>
+    <string name="sugar_level">مستوى السكر</string>
+    <string name="based_on_100g_serving">بناءً على حصة 100 غرام</string>
+    <string name="sugar_equivalent">ما يعادل السكر</string>
+    <string name="is_this_information_correct">هل هذه المعلومات صحيحة؟</string>
+    <string name="correct_information">معلومات صحيحة</string>
+    <string name="incorrect_information">معلومات غير صحيحة</string>
+    <string name="save_food">حفظ</string>
+    <string name="scan_again">مسح مرة أخرى</string>
+    <string name="saved_to_history">تم الحفظ في السجل</string>
+    <string name="food_not_found">لم يتم العثور على الطعام في قاعدة البيانات التجريبية</string>
+    <string name="enter_barcode">أدخل الباركود</string>
+
+    <!-- ========== COMMON DIALOGS ========== -->
+    <string name="enter_your_glucose_reading">أدخل قراءة السكر الخاصة بك</string>
+    <string name="when_was_this_reading">متى كانت هذه القراءة؟</string>
+    <string name="fasting_before_breakfast">صائم (قبل الإفطار)</string>
+    <string name="before_meal">قبل الوجبة</string>
+    <string name="after_meal_2_hours">بعد الوجبة (ساعتين)</string>
+    <string name="random_other">عشوائي / آخر</string>
+    <string name="glucose_logged">تم تسجيل السكر!</string>
+    <string name="enter_valid_glucose">أدخل قيمة سكر صالحة</string>
+    <string name="glucose_feedback">قراءة السكر بعد ساعتين</string>
+    <string name="glucose_hint">السكر (مجم/دل)</string>
+
+    <!-- ========== TIPS ========== -->
+    <string name="todays_tip">نصيحة اليوم</string>
+    <string name="tip_nutrition">التغذية</string>
+    <string name="tip_exercise">التمارين</string>
+    <string name="tip_insulin">الأنسولين</string>
+    <string name="tip_monitoring">المراقبة</string>
+    <string name="tip_wellness">الصحة العامة</string>
+    <string name="tip_safety">السلامة</string>
+    <string name="tip_special">خاص</string>
+    <string name="tip_motivation">تحفيز</string>
+    <string name="new_tip_button">↻ نصيحة جديدة</string>
+
+    <!-- ========== LANGUAGE ========== -->
+    <string name="language_changed">تم تغيير اللغة</string>
+    <string name="langue_changee">تم تغيير اللغة</string>
+    <string name="تم_تغيير_اللغة">تم تغيير اللغة</string>
+    <string name="language_saved_restarting">تم حفظ اللغة. إعادة التشغيل...</string>
+
+    <!-- ========== DARK MODE ========== -->
+    <string name="dark_mode_enabled">تم تفعيل الوضع الليلي</string>
+    <string name="light_mode_enabled">تم تفعيل الوضع النهاري</string>
+    <string name="dark_mode_enabled_restarting">تم تفعيل الوضع الليلي. إعادة التشغيل...</string>
+    <string name="light_mode_enabled_restarting">تم تفعيل الوضع النهاري. إعادة التشغيل...</string>
+
+    <!-- ========== ERROR MESSAGES ========== -->
+    <string name="error_loading_data">خطأ في تحميل البيانات</string>
+    <string name="please_log_in_first">الرجاء تسجيل الدخول أولاً</string>
+    <string name="invalid_email_or_password">البريد الإلكتروني أو كلمة المرور غير صحيحة</string>
+    <string name="email_already_registered">البريد الإلكتروني مسجل بالفعل</string>
+    <string name="password_min_6_characters">يجب أن تتكون كلمة المرور من 6 أحرف على الأقل</string>
+    <string name="passwords_do_not_match">كلمتا المرور غير متطابقتين</string>
+    <string name="terms_agree_text_ar">لقد قرأت وأوافق على</string>
+
+    <string name="account_created">تم إنشاء الحساب!</string>
+    <string name="registration_failed">فشل التسجيل</string>
+    <string name="please_contact_support">الرجاء الاتصال بالدعم الفني</string>
+</resources>

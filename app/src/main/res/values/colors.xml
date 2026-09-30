@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary_blue">#2196F3</color>
+    <color name="primary_green">#4CAF50</color>
+    <color name="accent_blue">#03A9F4</color>
+    <color name="accent_green">#8BC34A</color>
+
+    <!-- Backgrounds -->
+    <color name="background_light">#F5F9FF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#070000</color>
+
+        <color name="background_color">#FFF5F5F5</color>
+
+
+
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+
+    <!-- UI Elements -->
+    <color name="border_light">#E0E0E0</color>
+    <color name="success_green">#2E7D32</color>
+    <color name="warning_orange">#FF9800</color>
+    <color name="light_gray">#F0F0F0</color>
+    <color name="bg_gradient_start">#E3F2FD</color>
+    <color name="bg_gradient_end">#F1F8E9</color>
+    <color name="background_gradient_start">#6675e0</color>
+    <color name="card_insulin_start">#4A90E2</color>
+    <color name="background_gradient_end">#C850C0</color>
+    <color name="card_insulin_end">#6C5CE7</color>
+    <color name="card_food_start">#50C878</color>
+    <color name="card_food_end">#2ECC71</color>
+    <color name="card_calendar_start">#FF6B6B</color>
+    <color name="card_calendar_end">#E74C3C</color>
+    <color name="card_recipe_start">#9B59B6</color>
+    <color name="card_recipe_end">#8E44AD</color>
+    <color name="error_red">#F44336</color>
+    <color name="bmi_background">#E8F5E9</color>
+    <color name="bmi_light">#F1F8E9</color>
+    <color name="info_light">#E3F2FD</color>
+    <color name="primary_purple">#9C27B0</color>
+    <color name="primary_red">#F44336</color>
+    <!-- Nutrition Colors -->
+    <color name="nutrition_carbs">#FF9800</color>     <!-- Orange for Carbs -->
+    <color name="nutrition_protein">#2196F3</color>   <!-- Blue for Protein -->
+    <color name="nutrition_fat">#FFC107</color>       <!-- Yellow for Fat -->
+    <color name="nutrition_fiber">#4CAF50</color>     <!-- Green for Fiber -->
+    <color name="nutrition_calories">#9C27B0</color>  <!-- Purple for Calories -->
+    <!-- Glucose Status Colors -->
+    <color name="glucose_low">#2196F3</color>         <!-- Blue - Low -->
+    <color name="glucose_normal">#4CAF50</color>      <!-- Green - Normal -->
+    <color name="glucose_high">#FF9800</color>        <!-- Orange - High -->
+    <color name="glucose_danger">#F44336</color>      <!-- Red - Danger -->
+
+    <!-- Backgrounds for Status -->
+    <color name="glucose_bg_low">#E3F2FD</color>      <!-- Light Blue -->
+    <color name="glucose_bg_normal">#E8F5E9</color>   <!-- Light Green -->
+    <color name="glucose_bg_high">#FFF3E0</color>     <!-- Light Orange -->
+    <color name="glucose_bg_danger">#FFEBEE</color>   <!-- Light Red -->
+    <!-- Card Backgrounds -->
+    <color name="card_blue">#E3F2FD</color>           <!-- Light Blue Card -->
+    <color name="card_green">#E8F5E9</color>          <!-- Light Green Card -->
+    <color name="card_orange">#FFF3E0</color>         <!-- Light Orange Card -->
+    <color name="card_red">#FFEBEE</color>            <!-- Light Red Card -->
+    <color name="card_purple">#F3E5F5</color>         <!-- Light Purple Card -->
+    <!-- Text Colors for Sugar Levels -->
+    <color name="sugar_low">#2E7D32</color>      <!-- Dark Green -->
+    <color name="sugar_medium">#F57C00</color>   <!-- Dark Orange -->
+    <color name="sugar_high">#C62828</color>     <!-- Dark Red -->
+    <color name="sugar_extreme">#6A1B9A</color>  <!-- Dark Purple -->
+    <!-- Progress Bar Colors -->
+    <color name="progress_low">#4CAF50</color>        <!-- Green Progress -->
+    <color name="progress_medium">#FF9800</color>     <!-- Orange Progress -->
+    <color name="progress_high">#F44336</color>       <!-- Red Progress -->
+    <color name="progress_bg">#E0E0E0</color>         <!-- Gray Background -->
+    <color name="light_blue">#E3F2FD</color>
+    <color name="light_purple">#F3E5F5</color>
+    <color name="light_orange">#FFF3E0</color>
+    <color name="light_green">#E8F5E9</color>
+    <color name="light_yellow">#FFF9C4</color>
+</resources>

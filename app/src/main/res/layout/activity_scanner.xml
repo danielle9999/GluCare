@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_food_gradient"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Decorative Elements -->
+        <View
+            android:id="@+id/decorativeRed"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/circle_glow_red"
+            android:alpha="0.1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="-50dp"
+            android:layout_marginEnd="-50dp" />
+
+        <View
+            android:id="@+id/decorativeOrange"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:background="@drawable/circle_glow_orange"
+            android:alpha="0.1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="-40dp"
+            android:layout_marginStart="-40dp" />
+
+        <!-- Header -->
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:id="@+id/layoutIconBackground"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/circle_white"
+                android:gravity="center"
+                android:elevation="4dp">
+
+
+                <ImageView
+                    android:id="@+id/ivHeaderIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_barcode_scan"
+                    android:scaleType="centerInside" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutHeaderText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:id="@+id/tvHeaderTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FOOD SCANNER"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"
+                    android:letterSpacing="0.1" />
+
+                <TextView
+                    android:id="@+id/tvHeaderSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check Sugar Content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivGlucoseMeter"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_glucose_meter"
+                android:padding="8dp"
+                android:background="@drawable/circle_light_red"
+                app:tint="@color/sugar_high" />
+        </LinearLayout>
+
+        <!-- Camera/Search Mode Toggle -->
+        <LinearLayout
+            android:id="@+id/modeToggle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/headerLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_toggle"
+            android:padding="4dp">
+
+            <Button
+                android:id="@+id/btnCameraMode"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Camera"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/primary_red"
+                android:textColor="@color/white"
+                app:cornerRadius="25dp"
+                android:layout_marginEnd="4dp"
+                app:icon="@drawable/ic_camera_scan"
+                app:iconGravity="textStart" />
+
+            <Button
+                android:id="@+id/btnBarcodeMode"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Barcode"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/text_primary"
+                app:cornerRadius="25dp"
+                android:layout_marginStart="4dp"
+                app:icon="@drawable/ic_barcode_scan"
+                app:iconTint="@color/text_primary" />
+        </LinearLayout>
+
+        <!-- Camera Preview Area (Camera Mode) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cameraPreview"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            app:layout_constraintTop_toBottomOf="@id/modeToggle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/layoutCameraPreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/black">
+
+                <ImageView
+                    android:id="@+id/ivCameraPlaceholder"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_camera_scan"
+                    app:tint="@color/white"
+                    android:alpha="0.5" />
+
+                <TextView
+                    android:id="@+id/tvCameraInstruction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Point camera at food"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:alpha="0.7"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Scanner Overlay -->
+                <View
+                    android:id="@+id/scannerOverlay"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/scanner_frame"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Barcode Input Area (Barcode Mode) -->
+        <LinearLayout
+            android:id="@+id/barcodeInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/modeToggle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"
+            android:visibility="gone">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardBarcodePreview"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutBarcodePreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/ivBarcodePlaceholder"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_barcode_scan"
+                        app:tint="@color/text_secondary" />
+
+                    <TextView
+                        android:id="@+id/tvBarcodeInstruction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Scan barcode or enter manually"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter barcode number"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:endIconMode="clear_text"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etBarcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnLookup"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="LOOK UP PRODUCT"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/primary_red"
+                android:textColor="@color/white"
+                app:cornerRadius="25dp" />
+        </LinearLayout>
+
+        <!-- Search Manual Entry -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cameraPreview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            android:hint="Search food by name..."
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="25dp"
+            app:boxCornerRadiusTopEnd="25dp"
+            app:boxCornerRadiusBottomStart="25dp"
+            app:boxCornerRadiusBottomEnd="25dp"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_search"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSearchFood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Result Card (Shows after scanning) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/resultCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/searchLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/white"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/layoutResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Food Name and Favorite -->
+                <LinearLayout
+                    android:id="@+id/layoutFoodHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:id="@+id/layoutFoodIcon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/circle_light_orange"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/ivFoodIcon"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_apple"
+                            app:tint="@color/primary_red" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutFoodName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+
+                        <TextView
+                            android:id="@+id/tvFoodName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Apple"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+
+                        <TextView
+                            android:id="@+id/tvFoodSize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Medium size (182g)"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/btnFavorite"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_favorite"
+                        android:padding="6dp"
+                        android:background="@drawable/circle_light_green"
+                        app:tint="@color/sugar_medium" />
+                </LinearLayout>
+
+                <!-- Sugar Focus Display -->
+                <LinearLayout
+                    android:id="@+id/layoutSugarFocus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_sugar_focus"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:id="@+id/ivSugarFocusIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_sugar"
+                        app:tint="@color/sugar_high" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutSugarFocusValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+
+                        <TextView
+                            android:id="@+id/tvSugarFocusLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Sugar"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary" />
+
+                        <LinearLayout
+                            android:id="@+id/layoutSugarFocusAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/tvSugarFocusAmount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="19"
+                                android:textSize="32sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/sugar_high" />
+
+                            <TextView
+                                android:id="@+id/tvSugarFocusUnit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="g"
+                                android:textSize="16sp"
+                                android:textColor="@color/text_secondary"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginBottom="4dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivSugarWarning"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_sugar_warning"
+                        app:tint="@color/sugar_high"
+                        android:background="@drawable/circle_light_red"
+                        android:padding="8dp" />
+                </LinearLayout>
+
+                <!-- Sugar Level Indicator -->
+                <LinearLayout
+                    android:id="@+id/layoutSugarLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:id="@+id/layoutSugarLevelHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="4dp">
+
+                        <TextView
+                            android:id="@+id/tvSugarLevelLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sugar Level"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary" />
+
+                        <TextView
+                            android:id="@+id/tvSugarLevelSpacer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/tvSugarLevelStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="High"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/sugar_high" />
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progressSugarLevel"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:progress="75"
+                        android:progressTint="@color/sugar_high"
+                        android:progressBackgroundTint="@color/light_gray"
+                        android:background="@drawable/bg_progress_grey" />
+                </LinearLayout>
+
+                <!-- Complete Nutrition Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardNutrition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/background_light"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:id="@+id/layoutNutrition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/tvNutritionTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nutrition Facts"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginBottom="12dp" />
+
+                        <!-- Macronutrients Grid -->
+                        <GridLayout
+                            android:id="@+id/gridNutrition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:columnCount="2"
+                            android:rowCount="3"
+                            android:layout_marginBottom="8dp">
+
+                            <!-- Calories -->
+                            <LinearLayout
+                                android:id="@+id/layoutCalories"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:orientation="vertical"
+                                android:padding="8dp"
+                                android:background="@drawable/bg_nutrition_item"
+                                android:layout_margin="4dp">
+
+                                <TextView
+                                    android:id="@+id/tvCaloriesLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Calories"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/text_secondary" />
+
+                                <LinearLayout
+                                    android:id="@+id/layoutCaloriesValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvCaloriesValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="95"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/text_primary" />
+
+                                    <TextView
+                                        android:id="@+id/tvCaloriesUnit"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="kcal"
+                                        android:textSize="10sp"
+                                        android:textColor="@color/text_secondary"
+                                        android:layout_marginStart="2dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- Total Carbs -->
+                            <LinearLayout
+                                android:id="@+id/layoutCarbs"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:orientation="vertical"
+                                android:padding="8dp"
+                                android:background="@drawable/bg_nutrition_item"
+                                android:layout_margin="4dp">
+
+                                <TextView
+                                    android:id="@+id/tvCarbsLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Total Carbs"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/text_secondary" />
+
+                                <LinearLayout
+                                    android:id="@+id/layoutCarbsValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvCarbsValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="25"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/warning_orange" />
+
+                                    <TextView
+                                        android:id="@+id/tvCarbsUnit"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="g"
+                                        android:textSize="10sp"
+                                        android:textColor="@color/text_secondary"
+                                        android:layout_marginStart="2dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- Fiber -->
+                            <LinearLayout
+                                android:id="@+id/layoutFiber"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:orientation="vertical"
+                                android:padding="8dp"
+                                android:background="@drawable/bg_nutrition_item"
+                                android:layout_margin="4dp">
+
+                                <TextView
+                                    android:id="@+id/tvFiberLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Fiber"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/text_secondary" />
+
+                                <LinearLayout
+                                    android:id="@+id/layoutFiberValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvFiberValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="4"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/primary_green" />
+
+                                    <TextView
+                                        android:id="@+id/tvFiberUnit"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="g"
+                                        android:textSize="10sp"
+                                        android:textColor="@color/text_secondary"
+                                        android:layout_marginStart="2dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- Sugar (Highlighted) -->
+                            <LinearLayout
+                                android:id="@+id/layoutNutritionSugar"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:orientation="vertical"
+                                android:padding="8dp"
+                                android:background="@drawable/bg_nutrition_sugar"
+                                android:layout_margin="4dp">
+
+                                <TextView
+                                    android:id="@+id/tvNutritionSugarLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sugar"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/sugar_high" />
+
+                                <LinearLayout
+                                    android:id="@+id/layoutNutritionSugarValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvNutritionSugarValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="19"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/sugar_high" />
+
+                                    <TextView
+                                        android:id="@+id/tvNutritionSugarUnit"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="g"
+                                        android:textSize="10sp"
+                                        android:textColor="@color/sugar_high"
+                                        android:layout_marginStart="2dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- Protein -->
+                            <LinearLayout
+                                android:id="@+id/layoutProtein"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:orientation="vertical"
+                                android:padding="8dp"
+                                android:background="@drawable/bg_nutrition_item"
+                                android:layout_margin="4dp">
+
+                                <TextView
+                                    android:id="@+id/tvProteinLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Protein"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/text_secondary" />
+
+                                <LinearLayout
+                                    android:id="@+id/layoutProteinValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvProteinValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0.5"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/primary_blue" />
+
+                                    <TextView
+                                        android:id="@+id/tvProteinUnit"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="g"
+                                        android:textSize="10sp"
+                                        android:textColor="@color/text_secondary"
+                                        android:layout_marginStart="2dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- Fat -->
+                            <LinearLayout
+                                android:id="@+id/layoutFat"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:orientation="vertical"
+                                android:padding="8dp"
+                                android:background="@drawable/bg_nutrition_item"
+                                android:layout_margin="4dp">
+
+                                <TextView
+                                    android:id="@+id/tvFatLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Fat"
+                                    android:textSize="11sp"
+                                    android:textColor="@color/text_secondary" />
+
+                                <LinearLayout
+                                    android:id="@+id/layoutFatValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvFatValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0.3"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/warning_orange" />
+
+                                    <TextView
+                                        android:id="@+id/tvFatUnit"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="g"
+                                        android:textSize="10sp"
+                                        android:textColor="@color/text_secondary"
+                                        android:layout_marginStart="2dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </GridLayout>
+
+                        <!-- Additional Info -->
+                        <LinearLayout
+                            android:id="@+id/layoutNutritionInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="8dp">
+
+                            <ImageView
+                                android:id="@+id/ivInfoIcon"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_info"
+                                app:tint="@color/text_secondary" />
+
+                            <TextView
+                                android:id="@+id/tvServingSize"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Based on 100g serving"
+                                android:textSize="10sp"
+                                android:textColor="@color/text_secondary"
+                                android:layout_marginStart="4dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Sugar Equivalent -->
+                <LinearLayout
+                    android:id="@+id/layoutSugarEquivalent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@color/background_light"
+                    android:padding="12dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:id="@+id/ivTeaspoon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_teaspoon"
+                        app:tint="@color/sugar_high" />
+
+                    <TextView
+                        android:id="@+id/tvSugarEquivalentLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sugar: "
+                        android:textSize="12sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginStart="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvSugarTeaspoons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.5"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/sugar_high" />
+
+                    <TextView
+                        android:id="@+id/tvTeaspoonUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" tsp"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_secondary" />
+
+                    <TextView
+                        android:id="@+id/tvSugarSpacer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tvCarbsTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Carbs: 25g"
+                        android:textSize="12sp"
+                        android:textColor="@color/warning_orange"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="2dp"
+                        android:background="@drawable/bg_carb_tag" />
+                </LinearLayout>
+
+                <!-- Check/X Buttons for Data Verification -->
+                <LinearLayout
+                    android:id="@+id/layoutVerification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/background_light"
+                    android:padding="12dp"
+                    app:cardCornerRadius="12dp">
+
+                    <TextView
+                        android:id="@+id/tvVerificationQuestion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Is this information correct?"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_primary" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCorrect"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:icon="@drawable/ic_check"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        android:backgroundTint="@color/success_green"
+                        app:cornerRadius="24dp"
+                        android:layout_marginEnd="8dp"
+                        android:tooltipText="Correct information" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnIncorrect"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:icon="@drawable/ic_close"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        android:backgroundTint="@color/error_red"
+                        app:cornerRadius="24dp"
+                        android:tooltipText="Incorrect information" />
+                </LinearLayout>
+
+                <!-- Action Buttons -->
+                <LinearLayout
+                    android:id="@+id/layoutActions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnSaveFood"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Save"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/primary_green"
+                        android:textColor="@color/white"
+                        app:cornerRadius="25dp"
+                        android:layout_marginEnd="8dp"
+                        app:icon="@drawable/ic_save"
+                        app:iconGravity="textStart" />
+
+                    <Button
+                        android:id="@+id/btnScanAgain"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Scan Again"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/primary_blue"
+                        android:textColor="@color/white"
+                        app:cornerRadius="25dp"
+                        android:layout_marginStart="8dp"
+                        app:icon="@drawable/ic_refresh"
+                        app:iconGravity="textStart" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Bottom Spacing -->
+        <View
+            android:id="@+id/bottomSpacing"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toBottomOf="@id/resultCard"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

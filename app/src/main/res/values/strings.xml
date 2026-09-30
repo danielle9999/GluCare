@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">Glucare</string>
+
+    <!-- Auth & Onboarding -->
+    <string name="welcome">Welcome</string>
+    <string name="advicore">advicore</string>
+
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="enter_barcode">Enter barcode</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="send_reset_link">Send Reset Link</string>
+    <string name="back_to_login">Back to Login</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="full_name">Full Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="create_account">CREATE ACCOUNT</string>
+    <string name="glucose_mg_dl">mg/dL</string>
+    <string name="complete_profile">COMPLETE PROFILE</string>
+    <string name="track_your_glucose">Track Your Glucose</string>
+    <string name="track_glucose_desc">Monitor your blood glucose levels easily and see trends over time</string>
+    <string name="smart_insulin_calculator">Smart Insulin Calculator</string>
+    <string name="smart_insulin_desc">Calculate your insulin doses based on carbs and current glucose levels</string>
+    <string name="ai_food_scanner">AI Food Scanner</string>
+    <string name="ai_food_scanner_desc">Scan food products to check sugar content and nutritional information</string>
+    <string name="stay_organized">Stay Organized</string>
+    <string name="stay_organized_desc">Keep track of appointments, medications, and meals with the calendar</string>
+    <string name="next">Next</string>
+    <string name="get_started">Get Started</string>
+    <string name="skip">Skip</string>
+
+    <!-- Home Screen -->
+    <string name="home">Home</string>
+    <string name="good_morning">Good Morning,</string>
+    <string name="good_afternoon">Good Afternoon,</string>
+    <string name="good_evening">Good Evening,</string>
+    <string name="today_glucose">Today\'s Glucose</string>
+    <string name="log">Log</string>
+    <string name="no_reading_yet">No reading yet</string>
+    <string name="events_today">events today</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="insulin">Insulin</string>
+    <string name="calculator">Calculator</string>
+    <string name="food_scanner">Food Scanner</string>
+    <string name="calendar">Calendar</string>
+    <string name="events_and_meds">Events &amp; Meds</string>
+    <string name="recipes">Recipes</string>
+    <string name="diabetic_friendly">Diabetic Friendly</string>
+    <string name="find_doctor">Find a Doctor</string>
+    <string name="diabetes_specialists">Diabetes specialists near you</string>
+    <string name="reports_analytics">Reports &amp; Analytics</string>
+    <string name="view_health_trends">View your health trends</string>
+    <string name="upcoming_today">Upcoming Today</string>
+    <string name="weekly_summary">Weekly Summary</string>
+    <string name="avg_glucose">Avg Glucose</string>
+    <string name="insulin_units">Insulin (units)</string>
+    <string name="trend">Trend</string>
+    <string name="improving">Improving</string>
+    <string name="rising">Rising</string>
+    <string name="stable">Stable</string>
+
+    <!-- Profile Screen -->
+    <string name="profile">Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="logout">Logout</string>
+    <string name="health_data">HEALTH DATA</string>
+    <string name="glucose_history">Glucose History</string>
+    <string name="health_status">Health Status</string>
+    <string name="average_status">Average Status</string>
+    <string name="average_glucose_level">Average Glucose Level</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="verified">Verified</string>
+    <string name="primary">Primary</string>
+    <string name="your_health_status">Your Health Status</string>
+    <string name="glucose_average_status">Glucose Average Status</string>
+    <string name="full_reports">Full Reports</string>
+    <string name="log_out">Log Out</string>
+    <string name="are_you_sure_logout">Are you sure you want to log out?</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+    <string name="no_phone_number">No phone number set</string>
+    <string name="history">History</string>
+    <string name="status_log">Status Log</string>
+    <string name="glucose_level">Glucose Level</string>
+
+    <!-- Settings Screen -->
+    <string name="settings">Settings</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="language">Language</string>
+    <string name="notifications">Notifications</string>
+    <string name="glucose_units">Glucose Units</string>
+    <string name="about">About</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="version">Version</string>
+    <string name="notifications_enabled">Notifications enabled</string>
+    <string name="notifications_disabled">Notifications disabled</string>
+    <string name="select_glucose_unit">Select Glucose Unit</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="english">English</string>
+    <string name="french">Français</string>
+    <string name="arabic">العربية</string>
+    <string name="select_language">Select Language</string>
+    <string name="save">Save</string>
+    <string name="diabetes_management_app">Diabetes Management App</string>
+    <string name="expert_chatbot">Expert Chatbot</string>
+    <string name="healthy_recipes">Healthy Recipes</string>
+    <string name="reminders">Reminders</string>
+    <string name="doctor_directory">Doctor Directory</string>
+    <string name="analytics">Analytics</string>
+    <string name="settings_updated">Settings updated</string>
+
+    <!-- Insulin Calculator -->
+    <string name="insulin_calculator_title">INSULIN CALCULATOR</string>
+    <string name="smart_dose">Smart Dose</string>
+    <string name="current_glucose">Current Glucose</string>
+    <string name="carbohydrates">Carbohydrates</string>
+    <string name="g">g</string>
+    <string name="insulin_ratio">Insulin Ratio</string>
+    <string name="calculate_dose">CALCULATE DOSE</string>
+    <string name="save_to_history">SAVE TO HISTORY</string>
+    <string name="units">units</string>
+    <string name="low">LOW</string>
+    <string name="normal">NORMAL</string>
+    <string name="elevated">ELEVATED</string>
+    <string name="high">HIGH</string>
+    <string name="carbs">Carbs</string>
+    <string name="correction">Correction</string>
+    <string name="target">Target</string>
+    <string name="ucsf_guidelines">UCSF GUIDELINES</string>
+    <string name="high_confidence">High Confidence</string>
+    <string name="medium_confidence">Medium Confidence</string>
+    <string name="low_confidence">Low Confidence</string>
+    <string name="first_time">First Time</string>
+    <string name="alternative_doses">Alternative doses:</string>
+    <string name="conservative">Conservative</string>
+    <string name="recommended">Recommended</string>
+    <string name="aggressive">Aggressive</string>
+    <string name="use_this_dose">USE THIS DOSE</string>
+    <string name="insulin_settings">Insulin Settings</string>
+    <string name="your_insulin_settings">Your Insulin Settings</string>
+    <string name="correction_factor">Correction Factor</string>
+    <string name="target_glucose">Target Glucose</string>
+    <string name="basal_dose">Basal Dose</string>
+    <string name="based_on_ucsf">Based on UCSF guidelines</string>
+    <string name="did_you_know">Did you know?</string>
+    <string name="educational_tip">Educational Tip</string>
+    <string name="new_tip">New Tip</string>
+    <string name="insulin_history">Insulin History</string>
+    <string name="no_history_yet">No history yet. Save some doses to see patterns!</string>
+    <string name="your_insulin_insights">Your Insulin Insights</string>
+    <string name="log_more_doses">Log more doses to see insights about your insulin patterns!</string>
+    <string name="dose_set_to">Dose set to</string>
+    <string name="calculate_a_dose_first">Calculate a dose first</string>
+    <string name="dose_saved">Dose saved! Track effectiveness in 2 hours</string>
+    <string name="track_effectiveness">Track Effectiveness</string>
+    <string name="record_glucose_in_2_hours">Record your glucose in 2 hours to see how well this dose worked?</string>
+    <string name="yes">Yes</string>
+    <string name="not_now">Not now</string>
+    <string name="two_hour_glucose_check">2-Hour Glucose Check</string>
+    <string name="submit">Submit</string>
+    <string name="feedback_recorded">Feedback recorded! This helps improve future recommendations.</string>
+    <string name="no_recent_glucose_readings">No recent glucose readings</string>
+    <string name="insulin_statistics">Insulin Statistics</string>
+    <string name="daily_insulin_usage">Daily Insulin Usage</string>
+    <string name="dose_effectiveness">Dose Effectiveness</string>
+    <string name="total_doses">Total Doses</string>
+    <string name="total_insulin">Total Insulin</string>
+    <string name="avg_dose">Avg Dose</string>
+    <string name="avg_carbs">Avg Carbs</string>
+    <string name="ic_ratio">I:C Ratio</string>
+    <string name="effectiveness_score">Effectiveness</string>
+
+    <!-- Chatbot -->
+    <string name="diabetes_assistant">Diabetes Assistant</string>
+    <string name="ask_about_diabetes">Ask about diabetes...</string>
+    <string name="low_sugar">Low Sugar</string>
+    <string name="high_sugar">High Sugar</string>
+    <string name="diet">Diet</string>
+    <string name="exercise">Exercise</string>
+    <string name="symptoms">Symptoms</string>
+    <string name="expert_typing">Expert is typing...</string>
+    <string name="send">Send</string>
+
+    <!-- Doctors -->
+    <string name="doctors">Doctors</string>
+    <string name="diabetes_specialists_title">Diabetes Specialists</string>
+    <string name="select_your_wilaya">Select your Wilaya</string>
+    <string name="choose_wilaya">Choose Wilaya</string>
+    <string name="select_wilaya_to_see_doctors">Select a wilaya to see doctors</string>
+    <string name="no_doctors_found">No doctors found</string>
+    <string name="doctors_found">doctors found</string>
+    <string name="doctor_in">doctor in</string>
+    <string name="doctors_in">doctors in</string>
+    <string name="no_phone_available">No phone number available</string>
+
+    <!-- Recipes -->
+    <string name="healthy_recipes_title">Healthy Recipes</string>
+    <string name="diabetic_friendly_title">Diabetic Friendly</string>
+    <string name="search_recipes">Search recipes…</string>
+    <string name="all_recipes">All recipes</string>
+    <string name="low_sugar_filter">🍬 Low Sugar</string>
+    <string name="quick_filter">⚡ Quick</string>
+    <string name="no_recipes_found">No recipes found</string>
+    <string name="favorites">Favorites</string>
+    <string name="favorite_recipes">Favorite Recipes</string>
+    <string name="your_saved_diabetic_recipes">Your saved diabetic recipes</string>
+    <string name="added_to_favorites">Added to favorites</string>
+    <string name="removed_from_favorites">Removed from favorites</string>
+    <string name="no_favorite_recipes_yet">No favorite recipes yet.\nTap the ❤️ on any recipe to add it here</string>
+    <string name="favorite_recipe_count">favorite recipe</string>
+    <string name="favorite_recipes_count">favorite recipes</string>
+    <string name="result_for">result for</string>
+    <string name="results_for">results for</string>
+    <string name="in_category">in</string>
+    <string name="nutrition_facts">Nutrition Facts</string>
+    <string name="calories">Calories</string>
+    <string name="total_carbs">Total Carbs</string>
+    <string name="protein">Protein</string>
+    <string name="fat">Fat</string>
+    <string name="fiber">Fiber</string>
+    <string name="sugar">Sugar</string>
+    <string name="prep_time">Prep Time</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="instructions">Instructions</string>
+    <string name="how_to_make">How to Make</string>
+    <string name="add_to_meal_plan">Add to Meal Plan</string>
+    <string name="plan_this_meal">Plan this meal</string>
+    <string name="date">Date</string>
+    <string name="meal_type">Meal Type</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
+    <string name="snack">Snack</string>
+    <string name="added_to_meal_plan">Added to meal plan!</string>
+
+    <!-- Calendar -->
+    <string name="calendar_title">Calendar</string>
+    <string name="select_day_to_see_events">Select a day to see events</string>
+    <string name="no_events_for_day">📭 No events for this day</string>
+    <string name="add_event">Add Event</string>
+    <string name="edit_event">Edit Event</string>
+    <string name="delete_event">Delete Event</string>
+    <string name="event_title_hint">Event Title</string>
+    <string name="event_description_hint">Description</string>
+    <string name="event_time_hint">Time (e.g., 14:30)</string>
+    <string name="event_location_hint">Location (Optional)</string>
+    <string name="event_type_label">Event Type</string>
+    <string name="medication">Medication</string>
+    <string name="appointment">Appointment</string>
+    <string name="meal">Meal</string>
+    <string name="set_reminder_30min">Set reminder 30 minutes before</string>
+    <string name="reminder_set">Reminder set 30 min before</string>
+    <string name="event_added">Event added!</string>
+    <string name="event_updated">Event updated!</string>
+    <string name="deleted">Deleted</string>
+    <string name="view_details">View Details</string>
+    <string name="set_reminder">Set Reminder</string>
+    <string name="all_day">All day</string>
+    <string name="no_location">No location</string>
+    <string name="no_description">No description</string>
+    <string name="event_details">Event Details</string>
+    <string name="title_required">Title is required</string>
+
+    <!-- Reports -->
+    <string name="reports_title">Reports</string>
+    <string name="reports_analytics_title">Reports &amp; Analytics</string>
+    <string name="glucose_report">Glucose</string>
+    <string name="insulin_report">Insulin</string>
+    <string name="summary_report">Summary</string>
+    <string name="share_report">Share Report</string>
+    <string name="export_csv">Export CSV</string>
+    <string name="export_pdf">Export as PDF</string>
+    <string name="last_7_days">Last 7 Days</string>
+    <string name="last_30_days">Last 30 Days</string>
+    <string name="glucose_trend">Glucose Trend</string>
+    <string name="summary_30_day">30-Day Summary</string>
+    <string name="daily_averages">Daily Averages</string>
+    <string name="insights_title">Insights</string>
+    <string name="no_glucose_data">No glucose data available</string>
+    <string name="no_insulin_data">No insulin data available</string>
+    <string name="average_by_time_of_day">Average by Time of Day</string>
+    <string name="morning">Morning</string>
+    <string name="afternoon">Afternoon</string>
+    <string name="evening">Evening</string>
+    <string name="night">Night</string>
+    <string name="time_in_range">Time in Range</string>
+    <string name="lower_than_70">Lower than (70)</string>
+    <string name="normal_range">Normal</string>
+    <string name="elevated_range">Elevated</string>
+    <string name="high_range">High (>180)</string>
+    <string name="last_reading">Last Reading</string>
+    <string name="on">on</string>
+    <string name="today_events">Today\'s Events</string>
+    <string name="most_readings_in">Most readings in</string>
+    <string name="generating_pdf">Generating PDF...</string>
+    <string name="open_pdf">Open PDF</string>
+    <string name="error_generating_pdf">Error generating PDF</string>
+    <string name="error_exporting_csv">Error exporting CSV</string>
+
+    <!-- Glucose History -->
+    <string name="glucose_history_title">Glucose History</string>
+    <string name="average_label">Average</string>
+    <string name="total_label">Total</string>
+    <string name="in_range_label">In Range</string>
+    <string name="no_readings_yet">No glucose readings yet.\nLog your first reading from the Home screen.</string>
+    <string name="delete_reading">Delete Reading</string>
+    <string name="readings">readings</string>
+    <string name="in_range_70_180">in range (70–180)</string>
+
+    <!-- Health Info -->
+    <string name="complete_your_profile">Complete Your Profile</string>
+    <string name="welcome_exclamation">Welcome!</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="your_age">Your Age</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="body_measurements">Body Measurements</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="cm">cm</string>
+    <string name="kg">kg</string>
+    <string name="your_bmi">Your BMI</string>
+    <string name="medical_information">Medical Information</string>
+    <string name="diabetes_type">Diabetes Type</string>
+    <string name="average_blood_sugar">Average Blood Sugar</string>
+    <string name="normal_range_70_140">Normal range: 70-140 mg/dL</string>
+    <string name="info_banner">This information helps us personalize your diabetes management plan</string>
+    <string name="underweight">Underweight</string>
+    <string name="overweight">Overweight</string>
+    <string name="obese">Obese</string>
+    <string name="not_calculated">Not calculated</string>
+    <string name="invalid_input">Invalid input</string>
+    <string name="age_required">Age required</string>
+    <string name="height_required">Height required</string>
+    <string name="weight_required">Weight required</string>
+    <string name="please_select_gender">Please select gender</string>
+    <string name="profile_completed">Profile completed!</string>
+    <string name="failed_to_save">Failed to save</string>
+
+    <!-- Food Scanner -->
+    <string name="food_scanner_title">FOOD SCANNER</string>
+    <string name="check_sugar_content">Check Sugar Content</string>
+    <string name="camera">Camera</string>
+    <string name="barcode">Barcode</string>
+    <string name="point_camera_at_food">Point camera at food</string>
+    <string name="scan_barcode_or_enter_manually">Scan barcode or enter manually</string>
+    <string name="enter_barcode_number">Enter barcode number</string>
+    <string name="look_up_product">LOOK UP PRODUCT</string>
+    <string name="search_food_by_name">Search food by name...</string>
+    <string name="total_sugar">Total Sugar</string>
+    <string name="sugar_level">Sugar Level</string>
+    <string name="based_on_100g_serving">Based on 100g serving</string>
+    <string name="sugar_equivalent">Sugar Equivalent</string>
+    <string name="is_this_information_correct">Is this information correct?</string>
+    <string name="correct_information">Correct information</string>
+    <string name="incorrect_information">Incorrect information</string>
+    <string name="save_food">Save</string>
+    <string name="scan_again">Scan Again</string>
+    <string name="saved_to_history">saved to history</string>
+    <string name="food_not_found">Food not found in demo database</string>
+
+    <!-- Common Dialogs -->
+    <string name="enter_your_glucose_reading">Enter your glucose reading</string>
+    <string name="when_was_this_reading">When was this reading?</string>
+    <string name="fasting_before_breakfast">Fasting (before breakfast)</string>
+    <string name="before_meal">Before meal</string>
+    <string name="after_meal_2_hours">After meal (2 hours)</string>
+    <string name="random_other">Random / Other</string>
+    <string name="glucose_logged">Glucose logged!</string>
+    <string name="enter_valid_glucose">Enter a valid glucose value</string>
+    <string name="glucose_feedback">2-Hour Glucose Reading</string>
+    <string name="glucose_hint">Glucose (mg/dL)</string>
+
+    <!-- Tips -->
+    <string name="todays_tip">Today\'s Tip</string>
+    <string name="tip_nutrition">Nutrition</string>
+    <string name="tip_exercise">Exercise</string>
+    <string name="tip_insulin">Insulin</string>
+    <string name="tip_monitoring">Monitoring</string>
+    <string name="tip_wellness">Wellness</string>
+    <string name="tip_safety">Safety</string>
+    <string name="tip_special">Special</string>
+    <string name="tip_motivation">Motivation</string>
+    <string name="new_tip_button">↻ New Tip</string>
+
+    <!-- Language & Dark Mode -->
+    <string name="language_changed">Language changed</string>
+    <string name="language_saved_restarting">Language saved. Restarting…</string>
+    <string name="dark_mode_enabled">Dark mode enabled</string>
+    <string name="light_mode_enabled">Light mode enabled</string>
+    <string name="dark_mode_enabled_restarting">Dark mode enabled. Restarting...</string>
+    <string name="light_mode_enabled_restarting">Light mode enabled. Restarting...</string>
+
+    <!-- Error Messages -->
+    <string name="error_loading_data">Error loading data</string>
+    <string name="please_log_in_first">Please log in first</string>
+    <string name="invalid_email_or_password">Invalid email or password</string>
+    <string name="email_already_registered">Email already registered</string>
+    <string name="password_min_6_characters">Password must be at least 6 characters</string>
+    <string name="passwords_do_not_match">Passwords do not match</string>
+    <string name="account_created">Account created!</string>
+    <string name="registration_failed">Registration failed</string>
+    <string name="please_contact_support">Please contact support</string>
+    <string name="loading">Loading...</string>
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+    <string name="close">Close</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+
+
+
+    <!-- Terms Agreement -->
+    <string name="terms_agree_text">I have read and agree to the</string>
+    <string name="add">Add</string>
+    <!-- Add these to your strings.xml -->
+    <string name="average">Average</string>
+    <string name="langue_changee">Language changed</string>
+    <string name="تم_تغيير_اللغة">Language changed</string>
+</resources>
